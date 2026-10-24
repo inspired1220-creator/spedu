@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슬기로운 디지털 생활 - 초등 6학년 디지털 시민성 퀴즈 (단일 파일 배포용)</title>
+  
+  <!-- Pretendard 웹 폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      word-break: keep-all;
+    }
+    .quiz-text-body {
+      font-size: 1.25rem; /* 20px */
+      line-height: 1.75rem;
+    }
+    .card-shadow {
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(99, 102, 241, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-slate-50 to-blue-50 min-h-screen text-slate-800 flex flex-col justify-between p-3 sm:p-6 md:p-8">
+
+  <!-- 상단 네비게이션/헤더 -->
+  <header class="max-w-3xl mx-auto w-full mb-4 sm:mb-6">
+    <div class="flex items-center justify-between bg-white/90 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-indigo-100 shadow-sm">
+      <div class="flex items-center space-x-2.5">
+        <span class="text-2xl sm:text-3xl">🛡️</span>
+        <div>
+          <h1 class="text-lg sm:text-xl font-extrabold text-indigo-900 tracking-tight">디지털 시민성 퀴즈</h1>
+          <p class="text-xs sm:text-sm text-indigo-500 font-medium">초등학교 6학년 디지털 역량 다지기</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold">
+        <span>🔒</span>
+        <span>완전 익명 보장</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="max-w-3xl mx-auto w-full flex-grow flex items-center justify-center">
+
+    <!-- 1. 시작 화면 -->
+    <section id="start-screen" class="w-full bg-white rounded-3xl p-6 sm:p-10 border-2 border-indigo-100 card-shadow transition-all">
+      <div class="text-center space-y-4 sm:space-y-6">
+        <div class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-tr from-indigo-500 to-purple-500 text-white rounded-3xl shadow-lg shadow-indigo-200 text-4xl sm:text-5xl transform hover:scale-105 transition-transform duration-300">
+          🌐
+        </div>
+        
+        <div class="space-y-2">
+          <span class="inline-block px-3.5 py-1.5 bg-indigo-100 text-indigo-800 rounded-full text-sm sm:text-base font-bold">
+            초등 6학년 눈높이 맞춤
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug">
+            슬기롭고 당당한<br><span class="text-indigo-600">디지털 시민</span>이 되어볼까요?
+          </h2>
+          <p class="quiz-text-body text-slate-600 max-w-xl mx-auto pt-2">
+            온라인 세상에서 나를 지키고 친구를 배려하는 10가지 상황 속 퀴즈를 풀어보세요!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-left pt-2">
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div class="text-xl">👣</div>
+            <div class="font-bold text-slate-800 text-sm mt-1">디지털 발자국</div>
+            <div class="text-xs text-slate-500">영구성과 흔적 관리</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div class="text-xl">🛡️</div>
+            <div class="font-bold text-slate-800 text-sm mt-1">사이버 폭력 예방</div>
+            <div class="text-xs text-slate-500">단톡방 배려와 예절</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div class="text-xl">🔍</div>
+            <div class="font-bold text-slate-800 text-sm mt-1">팩트체크 리터러시</div>
+            <div class="text-xs text-slate-500">가짜뉴스 가려내기</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div class="text-xl">🤖</div>
+            <div class="font-bold text-slate-800 text-sm mt-1">저작권 & AI 윤리</div>
+            <div class="text-xs text-slate-500">올바른 자료 인용</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div class="text-xl">🚨</div>
+            <div class="font-bold text-slate-800 text-sm mt-1">스미싱 & 개인정보</div>
+            <div class="text-xs text-slate-500">의심 링크 클릭 금지</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div class="text-xl">⏰</div>
+            <div class="font-bold text-slate-800 text-sm mt-1">디지털 웰빙</div>
+            <div class="text-xs text-slate-500">기기 과몰입 예방</div>
+          </div>
+        </div>
+
+        <div class="bg-indigo-50/70 border border-indigo-200 rounded-2xl p-4 text-left flex items-start space-x-3">
+          <span class="text-2xl flex-shrink-0">✨</span>
+          <p class="text-sm sm:text-base text-indigo-900 leading-relaxed font-medium">
+            <strong>학생 안심 안내:</strong> 본 퀴즈는 이름, 학번, 사진 등 어떠한 개인정보도 입력받지 않으며 저장하지 않습니다. 편안한 마음으로 즐겁게 참여하세요!
+          </p>
+        </div>
+
+        <div class="pt-2">
+          <button id="btn-start-quiz" type="button" class="w-full py-4 sm:py-5 px-8 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white rounded-2xl font-extrabold text-xl sm:text-2xl shadow-lg shadow-indigo-300 transition-all flex items-center justify-center space-x-3">
+            <span>퀴즈 도전 시작하기</span>
+            <span class="text-2xl animate-pulse">🚀</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 퀴즈 화면 -->
+    <section id="quiz-screen" class="w-full bg-white rounded-3xl p-5 sm:p-9 border-2 border-indigo-100 card-shadow transition-all hidden">
+      <div class="space-y-2 mb-6 sm:mb-8">
+        <div class="flex items-center justify-between text-sm sm:text-base font-bold text-slate-600">
+          <span id="question-badge" class="px-3.5 py-1 bg-indigo-100 text-indigo-700 rounded-full">
+            분야 로딩 중...
+          </span>
+          <span id="quiz-progress-text" class="text-indigo-600">1 / 10 문제 (10%)</span>
+        </div>
+        <div class="w-full bg-slate-100 h-3.5 rounded-full overflow-hidden p-0.5 border border-slate-200">
+          <div id="quiz-progress-bar" class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full transition-all duration-300" style="width: 10%;"></div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <h3 id="question-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-snug tracking-tight">
+          문제를 불러오는 중입니다...
+        </h3>
+
+        <div id="options-container" class="space-y-3.5">
+          <!-- JS로 동적 생성 -->
+        </div>
+
+        <div id="feedback-section" class="hidden rounded-2xl p-5 sm:p-6 border-2 transition-all space-y-3">
+          <div id="feedback-status"></div>
+          <div class="pt-1">
+            <h5 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-1">💡 왜 그럴까요? (핵심 해설)</h5>
+            <p id="feedback-explanation" class="text-base sm:text-lg text-slate-800 leading-relaxed font-medium">
+              해설 내용이 여기에 표시됩니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button id="btn-next-question" type="button" class="w-full py-4 px-6 bg-slate-900 hover:bg-indigo-600 active:scale-[0.99] text-white rounded-2xl font-bold text-lg sm:text-xl shadow-md transition-all flex items-center justify-center space-x-2">
+            <span>다음 문제로</span>
+            <span class="text-xl">👉</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 결과 화면 -->
+    <section id="result-screen" class="w-full bg-white rounded-3xl p-6 sm:p-10 border-2 border-indigo-100 card-shadow transition-all hidden">
+      <div class="space-y-6 sm:space-y-8">
+        
+        <div class="text-center space-y-4">
+          <div class="inline-block">
+            <span id="praise-badge" class="px-4 py-1.5 rounded-full text-sm sm:text-base font-extrabold bg-indigo-100 text-indigo-800 shadow-sm">
+              🏆 디지털 마스터
+            </span>
+          </div>
+
+          <div class="flex items-center justify-center space-x-4">
+            <div class="bg-indigo-50 border-2 border-indigo-200 px-6 py-4 rounded-3xl text-center">
+              <span class="text-xs sm:text-sm font-bold text-indigo-500 uppercase block">맞힌 문항</span>
+              <span id="score-number" class="text-3xl sm:text-5xl font-black text-indigo-700">8 / 10</span>
+            </div>
+            <div class="bg-purple-50 border-2 border-purple-200 px-6 py-4 rounded-3xl text-center">
+              <span class="text-xs sm:text-sm font-bold text-purple-500 uppercase block">총점</span>
+              <span id="score-percent" class="text-3xl sm:text-5xl font-black text-purple-700">80점</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 max-w-xl mx-auto">
+            <h3 id="praise-title" class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              훌륭합니다!
+            </h3>
+            <p id="praise-message" class="quiz-text-body text-slate-600 leading-relaxed">
+              칭찬 메시지가 여기에 표시됩니다.
+            </p>
+          </div>
+        </div>
+
+        <div id="submit-status-container" class="p-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-center">
+          <p id="submit-status-text" class="text-sm sm:text-base text-slate-600 font-medium">
+            구글 시트로 안전하게 전송 중... ⏳
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center space-x-2 border-b border-slate-200 pb-3">
+            <span class="text-2xl">📝</span>
+            <h4 class="text-xl font-extrabold text-slate-900">틀린 문제 복습 노트</h4>
+            <span class="text-xs sm:text-sm text-slate-500 font-normal">(정답과 해설 다시 확인)</span>
+          </div>
+          
+          <div id="review-list" class="space-y-4">
+            <!-- JS 동적 생성 -->
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <button id="btn-restart" type="button" class="w-full py-4 px-8 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white rounded-2xl font-extrabold text-xl shadow-lg shadow-indigo-300 transition-all flex items-center justify-center space-x-2">
+            <span>처음부터 다시 도전하기</span>
+            <span class="text-xl">🔄</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-3xl mx-auto w-full mt-6 text-center text-xs sm:text-sm text-slate-400">
+    <p>디지털 시민성 교육 형성평가 웹 애플리케이션 · 학생 개인정보를 수집하지 않습니다.</p>
+  </footer>
+
+  <!-- ================================================================= -->
+  <!-- 4. 자바스크립트 코드 (퀴즈 문항 데이터 + 실행 로직 + GAS 통신) -->
+  <!-- ================================================================= -->
+  <script>
+    // -------------------------------------------------------------
+    // [설정] 구글 앱스 스크립트(GAS) 웹 앱 URL
+    // -------------------------------------------------------------
+    const GAS_WEB_APP_URL = "YOUR_GAS_WEB_APP_URL_HERE";
+
+    // -------------------------------------------------------------
+    // [문항 데이터] 초등 6학년 디지털 시민성 10문항
+    // -------------------------------------------------------------
+    const quizQuestions = [
+      {
+        id: 1,
+        category: "디지털 발자국",
+        badge: "👣 디지털 흔적",
+        question: "SNS나 인터넷에 남기는 나의 글, 사진, 검색 기록 등을 '디지털 발자국'이라고 합니다. 디지털 발자국에 대한 설명으로 가장 올바른 것은 무엇일까요?",
+        options: [
+          "인터넷에 올린 글은 삭제 버튼만 누르면 세상에서 완전히 사라진다.",
+          "비공개 계정에 올린 글이나 사진은 절대로 다른 사람에게 유출되지 않는다.",
+          "한번 온라인에 올린 정보는 다른 사람이 캡처하거나 퍼갈 수 있어 완전히 지우기 어렵다.",
+          "내가 검색한 기록이나 방문한 사이트 기록은 나만 볼 수 있으므로 아무 흔적도 남지 않는다."
+        ],
+        answer: 2,
+        explanation: "인터넷에 한 번 올린 글, 사진, 영상은 다른 사람이 캡처하거나 공유하면 원본을 지워도 완전히 삭제하기 어렵습니다. 게시물을 올리기 전에 '누가 봐도 괜찮은 정보인가?' 꼭 한 번 더 생각해야 해요!"
+      },
+      {
+        id: 2,
+        category: "사이버 폭력 예방",
+        badge: "🛡️ 단톡방 예절",
+        question: "학급 단체 채팅방(단톡방)에서 한 친구를 고의로 초대하지 않거나, 단체로 친구를 놀리는 글을 올리고 나가지 못하게 막는 행동은 무엇에 해당할까요?",
+        options: [
+          "친구들끼리 즐길 수 있는 재미있는 장난이다.",
+          "법과 학교 규칙으로 엄격히 금지된 사이버 폭력(사이버 따돌림)이다.",
+          "단톡방 분위기를 활발하게 만들기 위한 유쾌한 놀이이다.",
+          "친구의 잘못된 점을 고쳐주기 위한 정당한 교육 행동이다."
+        ],
+        answer: 1,
+        explanation: "단톡방에서 특정 친구를 따돌리거나, 험담을 하거나, 방에서 나가지 못하게 가두는 행위(카톡 감옥), 몰래 제외하는 행위는 모두 심각한 '사이버 폭력'입니다. 온라인에서도 친구의 마음을 존중하고 배려해야 해요!"
+      },
+      {
+        id: 3,
+        category: "미디어 리터러시",
+        badge: "🔍 팩트체크",
+        question: "유튜브나 포털 사이트에서 자극적인 제목의 뉴스 영상('내일부터 전국 학교가 영원히 사라진다?!')을 보았습니다. 이때 가장 올바른 대처 방법은 무엇일까요?",
+        options: [
+          "친구들에게 인기스타가 되기 위해 즉시 학급 단톡방에 링크를 공유한다.",
+          "신뢰할 수 있는 공식 기관(교육청, 정부, 주요 언론사)의 발표인지 출처를 팩트체크한다.",
+          "동영상 조회수가 10만 회를 넘었으니 당연히 진실이라고 믿는다.",
+          "댓글에 사람들이 '진짜네!'라고 쓰여 있으니 의심 없이 사실로 받아들인다."
+        ],
+        answer: 1,
+        explanation: "인터넷에는 사람들의 클릭을 유도하기 위한 '가짜 뉴스'와 낚시성 정보가 많습니다. 정보 작성자가 누구인지, 정부나 공공기관 등 믿을 수 있는 공식 출처인지 꼼꼼히 확인(팩트체크)하는 습관이 필수적입니다."
+      },
+      {
+        id: 4,
+        category: "저작권 및 AI 윤리",
+        badge: "🤖 AI와 정직함",
+        question: "학교 수행평가(사회 조사 보고서)를 작성할 때 생성형 AI(예: 챗GPT)나 인터넷 자료를 올바르게 사용하는 방법은 무엇일까요?",
+        options: [
+          "AI가 작성해 준 답변 전체를 그대로 복사하여 내가 직접 쓴 것처럼 제출한다.",
+          "인터넷 블로그의 글과 사진을 출처 표시 없이 그대로 붙여넣는다.",
+          "AI 답변과 인터넷 정보의 진위를 비판적으로 검토하고, 출처를 명확히 밝혀 참고 자료로 활용한다.",
+          "친구가 직접 그린 멋진 그림을 허락 없이 내 보고서 표지로 쓴다."
+        ],
+        answer: 2,
+        explanation: "생성형 AI가 만들어 준 글을 그대로 베껴 내는 것은 '표절'이자 부정행위입니다. AI 답변에는 거짓 정보(환각 현상)가 섞여 있을 수 있으므로 스스로 검증하고, 출처를 밝혀 학습의 보조 도구로 활용해야 합니다."
+      },
+      {
+        id: 5,
+        category: "스미싱 및 보안",
+        badge: "🚨 피싱 주의",
+        question: "스마트폰으로 '[우체국 택배 배송 오류] 주소지 불일치로 보관 중입니다. 확인: http://bit.ly/korea24'라는 문자가 왔습니다. 가장 현명한 대처법은?",
+        options: [
+          "궁금하니까 링크를 즉시 클릭하고 이름과 전화번호를 입력한다.",
+          "출처가 불분명하고 단축 URL이 포함된 링크는 절대 클릭하지 않고 삭제하거나 부모님께 알린다.",
+          "어떤 선물이 왔는지 확인하기 위해 링크를 눌러 다운로드되는 앱을 설치한다.",
+          "혹시 좋은 이벤트일지 모르니 친구들에게도 이 문자를 전달한다."
+        ],
+        answer: 1,
+        explanation: "출처가 의심스러운 택배 문자나 이벤트 링크는 악성 앱을 스마트폰에 몰래 설치해 개인정보와 소액결제를 빼가는 '스미싱(Smishing)' 사기입니다. 낯선 인터넷 링크는 절대 누르지 말아야 합니다!"
+      },
+      {
+        id: 6,
+        category: "디지털 웰빙",
+        badge: "⏰ 과몰입 방지",
+        question: "늦은 밤까지 스마트폰 숏폼 영상이나 게임에 빠져 수면이 부족해지고 다음 날 학교생활이 힘들어지는 것을 예방하기 위한 가장 좋은 실천 방법은?",
+        options: [
+          "밤늦게까지 스마트폰을 보고 다음 날 아침 에너지 음료를 많이 마신다.",
+          "취침 1시간 전 스마트폰을 거실에 두고 충전하는 등 스스로 사용 규칙을 정해 실천한다.",
+          "방의 불을 끄고 화면 밝기를 최대로 올려서 누운 채 스마트폰을 계속 사용한다.",
+          "주말에 한꺼번에 10시간 이상 연속으로 게임을 하여 스트레스를 푼다."
+        ],
+        answer: 1,
+        explanation: "스마트폰의 과도한 사용은 뇌 발달과 시력, 수면 건강을 해칩니다. 잠들기 전 스마트폰 멀리 두기, 하루 사용 시간 스스로 정하기 등 나만의 디지털 웰빙 규칙을 지키는 어린이가 멋진 디지털 시민입니다."
+      },
+      {
+        id: 7,
+        category: "온라인 안전",
+        badge: "⚠️ 낯선 사람 경계",
+        question: "온라인 게임에서 친해진 상대방이 '희귀 아이템을 선물해 줄 테니 얼굴 사진과 집 주소를 보내줘. 이번 주말에 둘이서 만나자!'라고 요구했습니다. 올바른 행동은?",
+        options: [
+          "비싼 아이템을 공짜로 준다고 하니 기분 좋게 집 주소를 알려준다.",
+          "부모님 몰래 약속 장소에 혼자 나가서 아이템을 받고 친구가 된다.",
+          "개인정보 요구를 즉시 거절하고 대화를 중단한 후, 곧바로 부모님이나 선생님께 도움을 요청한다.",
+          "내 사진 대신 다른 친구의 얼굴 사진을 보내준다."
+        ],
+        answer: 2,
+        explanation: "온라인에서 알게 된 사람이 선물이나 호의를 베풀며 개인정보(사진, 주소, 학교 등)를 묻거나 실제로 만나자고 하는 것은 위험한 범죄(온라인 그루밍)일 수 있습니다. 절대로 응하지 말고 어른들께 알려야 합니다."
+      },
+      {
+        id: 8,
+        category: "초상권 및 딥페이크",
+        badge: "📸 초상권 보호",
+        question: "체육 시간이나 쉬는 시간에 친구의 웃긴 표정이나 실수를 스마트폰으로 촬영했습니다. 이 사진에 대한 올바른 태도는 무엇일까요?",
+        options: [
+          "친구의 얼굴을 AI 합성 앱으로 변형(딥페이크)하여 온라인 커뮤니티에 올린다.",
+          "친구의 동의 없이 단톡방에 올려 모두가 놀리고 웃게 만든다.",
+          "친구의 허락 없이 촬영하거나 게시하지 않으며, 친구가 원하지 않으면 즉시 삭제한다.",
+          "친구 눈만 스티커로 가린 채 SNS 공개 계정에 게시한다."
+        ],
+        answer: 2,
+        explanation: "모든 사람에게는 자신의 모습이 함부로 촬영되거나 공개되지 않을 권리(초상권)가 있습니다. 친구의 허락 없이 사진이나 영상을 인터넷에 올리거나 AI로 합성하는 것은 법적 책임을 질 수 있는 잘못된 행동입니다."
+      },
+      {
+        id: 9,
+        category: "댓글 문화",
+        badge: "💬 고운 말 선플",
+        question: "인터넷 게시물이나 동영상에 댓글을 작성할 때 갖추어야 할 바람직한 디지털 시민의 태도는 무엇일까요?",
+        options: [
+          "내 실명과 얼굴이 보이지 않는 익명 공간이므로 마음에 안 들면 거친 욕설을 써도 된다.",
+          "화면 너머의 상대방도 상처받는 소중한 사람임을 기억하고, 따뜻하고 예의 바른 언어(선플)를 쓴다.",
+          "남들이 비난하는 댓글을 많이 달았으니 나도 장난삼아 함께 험담을 보탠다.",
+          "상대방의 의견이 나와 다르면 인신공격과 비아냥거리는 댓글을 남긴다."
+        ],
+        answer: 1,
+        explanation: "모니터 뒤에는 살아 숨 쉬는 사람이 있습니다. 악성 댓글(악플)은 상대방에게 씻기 힘든 마음의 상처를 주며 명예훼손이나 모욕죄로 처벌받을 수 있습니다. 늘 배려와 존중의 언어로 소통합시다."
+      },
+      {
+        id: 10,
+        category: "저작권 및 CCL",
+        badge: "🎵 창작물 존중",
+        question: "유튜브 쇼츠 영상이나 학교 발표 과제물을 제작할 때 다른 사람의 음악, 폰트, 이미지를 올바르게 활용하는 방법은 무엇일까요?",
+        options: [
+          "인기 가수의 최신 음원을 허락 없이 내 영상의 배경음악으로 마음대로 삽입한다.",
+          "포털 사이트 검색 결과에 나오는 모든 이미지는 무료이므로 아무거나 저장해서 쓴다.",
+          "저작권자가 무료 이용을 허락한 자유 이용 저작물(CCL, 공공누리 등)인지 확인하고, 출처 표기 등 이용 조건을 지킨다.",
+          "다른 사람이 공들여 만든 PPT 템플릿의 서명을 지우고 내가 만든 것처럼 발표한다."
+        ],
+        answer: 2,
+        explanation: "모든 창작물(음악, 글, 사진, 폰트, 영상)에는 저작권이 있습니다. 무료로 배포된 자료라 할지라도 '출처 표기', '비영리 사용' 등 저작자가 정한 조건(CCL)을 반드시 확인하고 규칙에 맞게 사용해야 합니다."
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // [상태 및 DOM 관리]
+    // -------------------------------------------------------------
+    const state = {
+      currentQuestionIndex: 0,
+      score: 0,
+      userResponses: [],
+      startTime: null,
+      endTime: null,
+      isAnswered: false,
+      isSubmitting: false,
+      isSubmitted: false
+    };
+
+    const dom = {
+      startScreen: document.getElementById("start-screen"),
+      quizScreen: document.getElementById("quiz-screen"),
+      resultScreen: document.getElementById("result-screen"),
+      btnStartQuiz: document.getElementById("btn-start-quiz"),
+      quizProgressBar: document.getElementById("quiz-progress-bar"),
+      quizProgressText: document.getElementById("quiz-progress-text"),
+      questionBadge: document.getElementById("question-badge"),
+      questionTitle: document.getElementById("question-title"),
+      optionsContainer: document.getElementById("options-container"),
+      feedbackSection: document.getElementById("feedback-section"),
+      feedbackStatus: document.getElementById("feedback-status"),
+      feedbackExplanation: document.getElementById("feedback-explanation"),
+      btnNextQuestion: document.getElementById("btn-next-question"),
+      scoreNumber: document.getElementById("score-number"),
+      scorePercent: document.getElementById("score-percent"),
+      praiseTitle: document.getElementById("praise-title"),
+      praiseMessage: document.getElementById("praise-message"),
+      praiseBadge: document.getElementById("praise-badge"),
+      reviewList: document.getElementById("review-list"),
+      btnRestart: document.getElementById("btn-restart"),
+      submitStatusContainer: document.getElementById("submit-status-container"),
+      submitStatusText: document.getElementById("submit-status-text")
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (dom.btnStartQuiz) dom.btnStartQuiz.addEventListener("click", startQuiz);
+      if (dom.btnNextQuestion) dom.btnNextQuestion.addEventListener("click", handleNextQuestion);
+      if (dom.btnRestart) dom.btnRestart.addEventListener("click", restartQuiz);
+    });
+
+    function startQuiz() {
+      state.currentQuestionIndex = 0;
+      state.score = 0;
+      state.userResponses = [];
+      state.startTime = new Date();
+      state.isAnswered = false;
+      state.isSubmitted = false;
+
+      dom.startScreen.classList.add("hidden");
+      dom.resultScreen.classList.add("hidden");
+      dom.quizScreen.classList.remove("hidden");
+      renderCurrentQuestion();
+    }
+
+    function renderCurrentQuestion() {
+      const currentQ = quizQuestions[state.currentQuestionIndex];
+      state.isAnswered = false;
+
+      const currentNum = state.currentQuestionIndex + 1;
+      const totalNum = quizQuestions.length;
+      const progressPercent = (currentNum / totalNum) * 100;
+
+      dom.quizProgressBar.style.width = `${progressPercent}%`;
+      dom.quizProgressText.innerText = `${currentNum} / ${totalNum} 문제 (${Math.round(progressPercent)}%)`;
+      dom.questionBadge.innerText = currentQ.badge;
+      dom.questionTitle.innerText = `${currentNum}. ${currentQ.question}`;
+
+      dom.feedbackSection.classList.add("hidden");
+      dom.feedbackSection.classList.remove("border-emerald-400", "bg-emerald-50", "border-rose-400", "bg-rose-50");
+
+      if (currentNum === totalNum) {
+        dom.btnNextQuestion.innerHTML = `<span>결과 확인하기</span> <span class="text-xl">🏆</span>`;
+      } else {
+        dom.btnNextQuestion.innerHTML = `<span>다음 문제로</span> <span class="text-xl">👉</span>`;
+      }
+
+      dom.optionsContainer.innerHTML = "";
+      const optionNumbers = ["①", "②", "③", "④"];
+
+      currentQ.options.forEach((optText, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quiz-option-btn w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/50 transition-all duration-200 flex items-start space-x-3.5 shadow-sm group active:scale-[0.99]";
+        btn.innerHTML = `
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-700 font-bold text-lg group-hover:bg-indigo-600 group-hover:text-white transition-colors flex-shrink-0 mt-0.5">${optionNumbers[idx]}</span>
+          <span class="text-slate-800 text-lg sm:text-xl font-medium leading-relaxed">${optText}</span>
+        `;
+        btn.addEventListener("click", () => selectOption(idx, btn));
+        dom.optionsContainer.appendChild(btn);
+      });
+    }
+
+    function selectOption(selectedIdx, clickedBtn) {
+      if (state.isAnswered) return;
+      state.isAnswered = true;
+
+      const currentQ = quizQuestions[state.currentQuestionIndex];
+      const isCorrect = (selectedIdx === currentQ.answer);
+
+      if (isCorrect) state.score++;
+
+      state.userResponses.push({
+        questionId: currentQ.id,
+        questionText: currentQ.question,
+        category: currentQ.category,
+        selectedOption: selectedIdx,
+        correctOption: currentQ.answer,
+        isCorrect: isCorrect,
+        explanation: currentQ.explanation
+      });
+
+      const buttons = dom.optionsContainer.querySelectorAll("button");
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        btn.classList.remove("hover:border-indigo-400", "hover:bg-indigo-50/50");
+
+        if (idx === currentQ.answer) {
+          btn.classList.add("border-emerald-500", "bg-emerald-50", "ring-2", "ring-emerald-400");
+          const badge = btn.querySelector("span:first-child");
+          if (badge) {
+            badge.classList.remove("bg-slate-100", "text-slate-700");
+            badge.classList.add("bg-emerald-600", "text-white");
+            badge.innerHTML = "✓";
+          }
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("border-rose-400", "bg-rose-50", "ring-2", "ring-rose-300");
+          const badge = btn.querySelector("span:first-child");
+          if (badge) {
+            badge.classList.remove("bg-slate-100", "text-slate-700");
+            badge.classList.add("bg-rose-600", "text-white");
+            badge.innerHTML = "✕";
+          }
+        } else {
+          btn.classList.add("opacity-60");
+        }
+      });
+
+      dom.feedbackSection.classList.remove("hidden");
+      if (isCorrect) {
+        dom.feedbackSection.classList.add("border-emerald-400", "bg-emerald-50");
+        dom.feedbackStatus.innerHTML = `
+          <div class="flex items-center space-x-2 text-emerald-700 font-extrabold text-xl sm:text-2xl">
+            <span class="text-3xl animate-bounce">🎉</span>
+            <span>정답입니다! 참 잘했어요!</span>
+          </div>
+        `;
+      } else {
+        dom.feedbackSection.classList.add("border-rose-400", "bg-rose-50");
+        dom.feedbackStatus.innerHTML = `
+          <div class="flex items-center space-x-2 text-rose-700 font-extrabold text-xl sm:text-2xl">
+            <span class="text-3xl">💡</span>
+            <span>아쉽지만 오답이에요. 아래 해설을 읽어볼까요?</span>
+          </div>
+        `;
+      }
+
+      dom.feedbackExplanation.innerText = currentQ.explanation;
+
+      setTimeout(() => {
+        dom.feedbackSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 100);
+    }
+
+    function handleNextQuestion() {
+      if (!state.isAnswered) {
+        alert("보기를 선택하여 정답을 맞춰보세요! 😊");
+        return;
+      }
+
+      if (state.currentQuestionIndex < quizQuestions.length - 1) {
+        state.currentQuestionIndex++;
+        renderCurrentQuestion();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        finishQuiz();
+      }
+    }
+
+    function finishQuiz() {
+      state.endTime = new Date();
+      const totalQuestions = quizQuestions.length;
+      const percentage = Math.round((state.score / totalQuestions) * 100);
+
+      dom.quizScreen.classList.add("hidden");
+      dom.resultScreen.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      dom.scoreNumber.innerText = `${state.score} / ${totalQuestions}`;
+      dom.scorePercent.innerText = `${percentage}점`;
+
+      applyPraiseMessage(state.score);
+      renderReviewSection();
+
+      sendDataToGoogleSheet({
+        score: state.score,
+        total: totalQuestions,
+        percentage: percentage,
+        startTime: state.startTime,
+        endTime: state.endTime,
+        responses: state.userResponses
+      });
+    }
+
+    function applyPraiseMessage(score) {
+      if (score === 10) {
+        dom.praiseBadge.innerText = "🏆 최고의 디지털 마스터";
+        dom.praiseTitle.innerText = "만점입니다! 완벽한 디지털 시민!";
+        dom.praiseMessage.innerText = "디지털 발자국, 저작권, 보안, 미디어 리터러시까지 모든 분야를 완벽하게 이해하고 있군요! 앞으로도 안전하고 멋진 인터넷 세상을 앞장서서 만들어가요!";
+      } else if (score >= 8) {
+        dom.praiseBadge.innerText = "🌟 훌륭한 디지털 가디언";
+        dom.praiseTitle.innerText = "대단해요! 아주 훌륭한 실력이에요!";
+        dom.praiseMessage.innerText = "디지털 세상을 안전하고 바르게 이용하는 멋진 습관을 잘 지니고 있습니다. 아쉽게 놓친 문제의 해설을 복습하면 백점 만점 가디언이 될 수 있어요!";
+      } else if (score >= 6) {
+        dom.praiseBadge.innerText = "🌱 씩씩한 디지털 탐험가";
+        dom.praiseTitle.innerText = "좋아요! 기초가 탄탄한 디지털 시민!";
+        dom.praiseMessage.innerText = "온라인 예절과 안전 수칙을 차근차근 잘 배우고 있네요. 아래 오답 노트를 찬찬히 읽어보고 다시 풀기에 도전해보세요!";
+      } else {
+        dom.praiseBadge.innerText = "💡 새싹 디지털 꿈나무";
+        dom.praiseTitle.innerText = "수고했어요! 함께 배우며 성장해요!";
+        dom.praiseMessage.innerText = "인터넷 세상에는 조심해야 할 것들이 참 많죠? 이번 퀴즈를 계기로 해설을 꼼꼼히 읽어보면 나를 지키는 힘이 쑥쑥 자라날 거예요!";
+      }
+    }
+
+    function renderReviewSection() {
+      dom.reviewList.innerHTML = "";
+      const wrongAnswers = state.userResponses.filter(r => !r.isCorrect);
+
+      if (wrongAnswers.length === 0) {
+        dom.reviewList.innerHTML = `
+          <div class="text-center py-8 px-4 bg-emerald-50 rounded-2xl border-2 border-emerald-200">
+            <span class="text-5xl">🎉</span>
+            <h4 class="text-xl font-bold text-emerald-800 mt-3">틀린 문제가 하나도 없어요!</h4>
+            <p class="text-slate-600 mt-1 text-base sm:text-lg">모든 문항을 정확하게 이해하고 맞췄습니다. 훌륭합니다!</p>
+          </div>
+        `;
+        return;
+      }
+
+      wrongAnswers.forEach((item) => {
+        const qData = quizQuestions.find(q => q.id === item.questionId);
+        const card = document.createElement("div");
+        card.className = "bg-white p-5 sm:p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3";
+        
+        card.innerHTML = `
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-700">문제 ${qData.id} · ${qData.category}</span>
+            <span class="text-rose-600 font-bold text-sm">❌ 내가 고른 오답: ${item.selectedOption + 1}번</span>
+          </div>
+          <h5 class="text-slate-900 font-bold text-lg leading-snug">${qData.question}</h5>
+          <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-base sm:text-lg">
+            <span class="font-extrabold text-emerald-700">✅ 정답 (${qData.answer + 1}번):</span> ${qData.options[qData.answer]}
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <span class="font-bold text-indigo-700">💡 친절 해설:</span> ${qData.explanation}
+          </div>
+        `;
+
+        dom.reviewList.appendChild(card);
+      });
+    }
+
+    function restartQuiz() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      startQuiz();
+    }
+
+    async function sendDataToGoogleSheet(data) {
+      const pad = (n) => String(n).padStart(2, "0");
+      const now = new Date();
+      const timestampStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      const durationSec = Math.round((data.endTime - data.startTime) / 1000);
+
+      const itemResults = {};
+      data.responses.forEach(r => {
+        itemResults[`Q${r.questionId}`] = r.isCorrect ? "O" : "X";
+      });
+
+      const payload = {
+        submittedAt: timestampStr,
+        totalScore: data.score,
+        totalQuestions: data.total,
+        percentage: data.percentage,
+        durationSeconds: durationSec,
+        itemResults: itemResults
+      };
+
+      dom.submitStatusContainer.classList.remove("hidden");
+      dom.submitStatusText.innerText = "구글 시트로 응답을 안전하게 전송하는 중... ⏳";
+
+      if (!GAS_WEB_APP_URL || GAS_WEB_APP_URL.includes("YOUR_GAS_WEB_APP_URL_HERE")) {
+        console.log("[익명 전송 시뮬레이션] GAS_WEB_APP_URL 설정 전:", payload);
+        setTimeout(() => {
+          dom.submitStatusText.innerHTML = `
+            <span class="text-indigo-600 font-semibold">ℹ️ (안내) GAS URL 설정 전: 익명 채점 결과가 준비되었습니다. (총점: ${data.score}/${data.total})</span>
+          `;
+        }, 600);
+        return;
+      }
+
+      try {
+        await fetch(GAS_WEB_APP_URL, {
+          method: "POST",
+          mode: "no-cors",
+          cache: "no-cache",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        dom.submitStatusText.innerHTML = `
+          <span class="text-emerald-600 font-bold">✨ 구글 스프레드시트에 응답이 안전하게 자동 기록되었습니다!</span>
+        `;
+      } catch (error) {
+        console.error("GAS 전송 실패:", error);
+        dom.submitStatusText.innerHTML = `
+          <span class="text-rose-500 font-medium">⚠️ 네트워크 문제로 전송되지 못했으나, 화면에서 점수와 해설을 확인할 수 있습니다.</span>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
